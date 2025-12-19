@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Messages</title>
+    <link rel="stylesheet" href="message.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="messages-content">
+            <div class="content-header">
+                <h1><i class="fas fa-comments"></i> Messages</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> New Message
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages-container">
+                <div class="messages-sidebar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search messages...">
+                    </div>
+
+                    <div class="folders">
+                        <div class="folder active">
+                            <i class="fas fa-inbox"></i>
+                            <span>Inbox</span>
+                            <span class="badge">12</span>
+                        </div>
+                        <div class="folder">
+                            <i class="fas fa-star"></i>
+                            <span>Starred</span>
+                        </div>
+                        <div class="folder">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Sent</span>
+                        </div>
+                        <div class="folder">
+                            <i class="fas fa-trash"></i>
+                            <span>Trash</span>
+                        </div>
+                    </div>
+
+                    <div class="labels">
+                        <h3>Labels</h3>
+                        <div class="label">
+                            <span class="color academic"></span>
+                            <span>Academic</span>
+                        </div>
+                        <div class="label">
+                            <span class="color group-work"></span>
+                            <span>Group Work</span>
+                        </div>
+                        <div class="label">
+                            <span class="color urgent"></span>
+                            <span>Urgent</span>
+                        </div>
+                        <div class="label">
+                            <span class="color admin"></span>
+                            <span>Administration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="messages-list">
+                    <div class="list-header">
+                        <div class="list-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                        </div>
+                        <div class="pagination-mini">
+                            <span>1-10 of 42</span>
+                            <button class="action-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Message Item - Unread -->
+                    <div class="message-item unread">
+                        <div class="message-select">
+                            <input type="checkbox">
+                        </div>
+                        <div class="message-star">
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="message-sender">
+                            <div class="avatar">TS</div>
+                            <span>Dr. Taylor Smith</span>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-preview">
+                                <span class="subject">Assignment Feedback - Quantum Physics</span>
+                                <span class="preview">Your assignment submission was excellent! I particularly liked your analysis of...</span>
+                            </div>
+                            <div class="message-labels">
+                                <span class="label academic">Academic</span>
+                            </div>
+                        </div>
+                        <div class="message-time">
+                            <span>2 hours ago</span>
+                            <div class="message-actions">
+                                <button class="action-btn">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Item - Important -->
+                    <div class="message-item important">
+                        <div class="message-select">
+                            <input type="checkbox">
+                        </div>
+                        <div class="message-star">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="message-sender">
+                            <div class="avatar">AD</div>
+                            <span>Academic Department</span>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-preview">
+                                <span class="subject">Important: Registration Deadline Extension</span>
+                                <span class="preview">The deadline for course registration has been extended to Friday...</span>
+                            </div>
+                            <div class="message-labels">
+                                <span class="label urgent">Urgent</span>
+                                <span class="label admin">Administration</span>
+                            </div>
+                        </div>
+                        <div class="message-time">
+                            <span>Yesterday</span>
+                            <div class="message-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Item - Group -->
+                    <div class="message-item">
+                        <div class="message-select">
+                            <input type="checkbox">
+                        </div>
+                        <div class="message-star">
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="message-sender">
+                            <div class="avatar">SG</div>
+                            <span>Study Group - Data Structures</span>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-preview">
+                                <span class="subject">Meeting tomorrow at 4pm</span>
+                                <span class="preview">Let's meet in the library to work on the lab report. I've attached the...</span>
+                            </div>
+                            <div class="message-labels">
+                                <span class="label group-work">Group Work</span>
+                            </div>
+                            <div class="message-attachments">
+                                <i class="fas fa-paperclip"></i>
+                            </div>
+                        </div>
+                        <div class="message-time">
+                            <span>Mar 5</span>
+                            <div class="message-actions">
+                                <button class="action-btn">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More message items would go here -->
+                </div>
+
+                <!-- Message Detail View (initially hidden) -->
+                <div class="message-detail">
+                    <div class="detail-header">
+                        <button class="back-btn">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <div class="detail-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-reply"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-reply-all"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="detail-subject">
+                        <h2>Assignment Feedback - Quantum Physics</h2>
+                        <div class="detail-star">
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="detail-sender">
+                        <div class="avatar">TS</div>
+                        <div class="sender-info">
+                            <div class="sender-name">Dr. Taylor Smith</div>
+                            <div class="sender-email">taylor.smith@university.edu</div>
+                        </div>
+                        <div class="message-time">
+                            <span>Today, 10:30 AM</span>
+                            <span>to me</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-body">
+                        <p>Dear Student,</p>
+                        
+                        <p>Your assignment submission was excellent! I particularly liked your analysis of wave functions in different potential wells. Your mathematical derivations were precise and well-presented.</p>
+                        
+                        <p>Here are a few areas where you could improve:</p>
+                        <ul>
+                            <li>Include more real-world applications of the concepts</li>
+                            <li>Label your diagrams more clearly</li>
+                            <li>Reference the textbook for the standard equations</li>
+                        </ul>
+                        
+                        <p>Overall grade: A-</p>
+                        
+                        <p>Best regards,<br>
+                        Dr. Taylor Smith</p>
+                    </div>
+
+                    <div class="detail-attachments">
+                        <h3>Attachments (1)</h3>
+                        <div class="attachment">
+                            <div class="attachment-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="attachment-info">
+                                <div class="attachment-name">Assignment_Feedback.pdf</div>
+                                <div class="attachment-size">245 KB</div>
+                            </div>
+                            <button class="action-btn download">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="detail-reply">
+                        <textarea placeholder="Reply to this message..."></textarea>
+                        <div class="reply-actions">
+                            <button class="btn-outline">
+                                Cancel
+                            </button>
+                            <button class="btn-primary">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle message detail view
+        document.querySelectorAll('.message-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (!e.target.closest('.message-select, .message-star, .action-btn')) {
+                    document.querySelector('.messages-list').style.display = 'none';
+                    document.querySelector('.message-detail').style.display = 'block';
+                }
+            });
+        });
+
+        // Back to list view
+        document.querySelector('.back-btn').addEventListener('click', function() {
+            document.querySelector('.messages-list').style.display = 'block';
+            document.querySelector('.message-detail').style.display = 'none';
+        });
+
+        // Toggle star
+        document.querySelectorAll('.message-star, .detail-star').forEach(star => {
+            star.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.replace('far', 'fas');
+                    this.closest('.message-item')?.classList.add('starred');
+                } else {
+                    icon.classList.replace('fas', 'far');
+                    this.closest('.message-item')?.classList.remove('starred');
+                }
+            });
+        });
+
+        // Toggle bookmark
+        document.querySelectorAll('.action-btn .fa-bookmark').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (this.classList.contains('far')) {
+                    this.classList.replace('far', 'fas');
+                } else {
+                    this.classList.replace('fas', 'far');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

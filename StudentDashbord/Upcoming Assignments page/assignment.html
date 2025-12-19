@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Upcoming Assignments</title>
+    <link rel="stylesheet" href="assignment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="assignments-content">
+            <div class="content-header">
+                <h1><i class="fas fa-tasks"></i> Upcoming Assignments</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search assignments...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <div class="filter-group">
+                    <h3>Course</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Courses</label>
+                        <label><input type="checkbox"> Advanced Physics</label>
+                        <label><input type="checkbox"> Calculus II</label>
+                        <label><input type="checkbox"> Data Structures</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Status</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Statuses</label>
+                        <label><input type="checkbox"> Not Started</label>
+                        <label><input type="checkbox"> In Progress</label>
+                        <label><input type="checkbox"> Submitted</label>
+                        <label><input type="checkbox"> Overdue</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Due Date</h3>
+                    <div class="filter-options">
+                        <label><input type="radio" name="due-date" checked> All Dates</label>
+                        <label><input type="radio" name="due-date"> Next 7 Days</label>
+                        <label><input type="radio" name="due-date"> This Month</label>
+                        <label><input type="radio" name="due-date"> Past Due</label>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-outline">Reset</button>
+                    <button class="btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="assignments-container">
+                <!-- Section: Overdue -->
+                <div class="section-header overdue">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Overdue</h2>
+                </div>
+                
+                <div class="assignment-card overdue">
+                    <div class="assignment-info">
+                        <div class="assignment-header">
+                            <h3>Quantum Physics Problem Set 3</h3>
+                            <span class="due-date">Due: Yesterday, 11:59 PM</span>
+                        </div>
+                        <div class="assignment-course">
+                            <i class="fas fa-atom"></i> Advanced Physics - Dr. Smith
+                        </div>
+                        <div class="assignment-description">
+                            Problems on wave functions and probability densities. Late submissions accepted with penalty.
+                        </div>
+                        <div class="assignment-attachments">
+                            <a href="#" class="attachment">
+                                <i class="fas fa-file-pdf"></i> Problem Set.pdf
+                            </a>
+                            <a href="#" class="attachment">
+                                <i class="fas fa-file-code"></i> Starter Code.zip
+                            </a>
+                        </div>
+                    </div>
+                    <div class="assignment-status">
+                        <div class="status-badge overdue">
+                            <i class="fas fa-clock"></i> Overdue
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="action-btn submit">
+                                <i class="fas fa-paper-plane"></i> Submit Late
+                            </button>
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Due This Week -->
+                <div class="section-header urgent">
+                    <h2><i class="fas fa-calendar-day"></i> Due This Week</h2>
+                </div>
+                
+                <div class="assignment-card urgent">
+                    <div class="assignment-info">
+                        <div class="assignment-header">
+                            <h3>Calculus II Midterm Project</h3>
+                            <span class="due-date">Due: Tomorrow, 11:59 PM</span>
+                        </div>
+                        <div class="assignment-course">
+                            <i class="fas fa-calculator"></i> Calculus II - Prof. Johnson
+                        </div>
+                        <div class="assignment-description">
+                            Create a visual representation of integration techniques with real-world applications.
+                        </div>
+                        <div class="assignment-attachments">
+                            <a href="#" class="attachment">
+                                <i class="fas fa-file-pdf"></i> Project Guidelines.pdf
+                            </a>
+                            <a href="#" class="attachment">
+                                <i class="fas fa-file-word"></i> Template.docx
+                            </a>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>65% complete</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="assignment-status">
+                        <div class="status-badge in-progress">
+                            <i class="fas fa-spinner"></i> In Progress
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="action-btn continue">
+                                <i class="fas fa-edit"></i> Continue
+                            </button>
+                            <button class="action-btn submit">
+                                <i class="fas fa-paper-plane"></i> Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Upcoming -->
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Upcoming</h2>
+                </div>
+                
+                <div class="assignment-card">
+                    <div class="assignment-info">
+                        <div class="assignment-header">
+                            <h3>Data Structures Lab Report</h3>
+                            <span class="due-date">Due: March 20, 2023</span>
+                        </div>
+                        <div class="assignment-course">
+                            <i class="fas fa-laptop-code"></i> Data Structures - Dr. Williams
+                        </div>
+                        <div class="assignment-description">
+                            Analysis of recursion algorithms with performance comparisons.
+                        </div>
+                        <div class="assignment-attachments">
+                            <a href="#" class="attachment">
+                                <i class="fas fa-file-pdf"></i> Lab Instructions.pdf
+                            </a>
+                        </div>
+                    </div>
+                    <div class="assignment-status">
+                        <div class="status-badge not-started">
+                            <i class="far fa-circle"></i> Not Started
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="action-btn start">
+                                <i class="fas fa-play"></i> Start
+                            </button>
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Completed -->
+                <div class="section-header completed">
+                    <h2><i class="fas fa-check-circle"></i> Completed</h2>
+                </div>
+                
+                <div class="assignment-card completed">
+                    <div class="assignment-info">
+                        <div class="assignment-header">
+                            <h3>Quantum Physics Problem Set 2</h3>
+                            <span class="due-date">Submitted: March 1, 2023</span>
+                        </div>
+                        <div class="assignment-course">
+                            <i class="fas fa-atom"></i> Advanced Physics - Dr. Smith
+                        </div>
+                        <div class="assignment-grade">
+                            <i class="fas fa-star"></i> Grade: A-
+                        </div>
+                    </div>
+                    <div class="assignment-status">
+                        <div class="status-badge submitted">
+                            <i class="fas fa-check"></i> Submitted
+                        </div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i> View Feedback
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle filter panel
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            document.querySelector('.filter-panel').classList.toggle('active');
+        });
+
+        // Start assignment functionality
+        document.querySelectorAll('.action-btn.start').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const assignmentCard = this.closest('.assignment-card');
+                assignmentCard.querySelector('.status-badge').innerHTML = 
+                    '<i class="fas fa-spinner"></i> In Progress';
+                assignmentCard.querySelector('.status-badge').classList.remove('not-started');
+                assignmentCard.querySelector('.status-badge').classList.add('in-progress');
+                this.innerHTML = '<i class="fas fa-edit"></i> Continue';
+                this.classList.remove('start');
+                this.classList.add('continue');
+                
+                // Add progress bar if not exists
+                if (!assignmentCard.querySelector('.progress-container')) {
+                    const description = assignmentCard.querySelector('.assignment-description');
+                    const progressHTML = `
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>5% complete</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    `;
+                    description.insertAdjacentHTML('afterend', progressHTML);
+                }
+            });
+        });
+
+        // Simulate submission
+        document.querySelectorAll('.action-btn.submit').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const assignmentCard = this.closest('.assignment-card');
+                assignmentCard.querySelector('.status-badge').innerHTML = 
+                    '<i class="fas fa-check"></i> Submitted';
+                assignmentCard.querySelector('.status-badge').classList.remove('in-progress', 'overdue');
+                assignmentCard.querySelector('.status-badge').classList.add('submitted');
+                
+                // Change due date to submitted date
+                const dueDate = assignmentCard.querySelector('.due-date');
+                if (dueDate) {
+                    dueDate.textContent = 'Submitted: ' + new Date().toLocaleDateString('en-US', {
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric'
+                    });
+                }
+                
+                // Move to completed section
+                const completedSection = document.querySelector('.section-header.completed')
+                    .nextElementSibling;
+                if (completedSection) {
+                    completedSection.appendChild(assignmentCard);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

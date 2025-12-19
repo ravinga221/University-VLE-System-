@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Notices & Announcements</title>
+    <link rel="stylesheet" href="notices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="notices-content">
+            <div class="content-header">
+                <h1><i class="fas fa-bullhorn"></i> Notices & Announcements</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search notices...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                    <button class="btn-outline">
+                        <i class="fas fa-bell"></i> Notification Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <div class="filter-group">
+                    <h3>Category</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Categories</label>
+                        <label><input type="checkbox"> Academics</label>
+                        <label><input type="checkbox"> Events</label>
+                        <label><input type="checkbox"> Emergencies</label>
+                        <label><input type="checkbox"> Administration</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Time Period</h3>
+                    <div class="filter-options">
+                        <label><input type="radio" name="period" checked> All Time</label>
+                        <label><input type="radio" name="period"> This Week</label>
+                        <label><input type="radio" name="period"> This Month</label>
+                        <label><input type="radio" name="period"> Last 3 Months</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Status</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Statuses</label>
+                        <label><input type="checkbox"> Unread</label>
+                        <label><input type="checkbox"> Important</label>
+                        <label><input type="checkbox"> Archived</label>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-outline">Reset</button>
+                    <button class="btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="notices-container">
+                <!-- Notice Item - Important -->
+                <div class="notice-item important">
+                    <div class="notice-badge">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Important</span>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-header">
+                            <h2>Midterm Exam Schedule - Spring 2023</h2>
+                            <span class="notice-date">Today, 9:30 AM</span>
+                        </div>
+                        <div class="notice-body">
+                            <p>The complete midterm exam schedule has been published. Exams will be held from March 15 to March 22. Please check your individual course portals for specific timings and locations.</p>
+                            <div class="notice-attachments">
+                                <a href="#" class="attachment">
+                                    <i class="fas fa-file-pdf"></i> Exam Schedule.pdf
+                                </a>
+                                <a href="#" class="attachment">
+                                    <i class="fas fa-link"></i> Exam Registration
+                                </a>
+                            </div>
+                            <div class="notice-deadline">
+                                <i class="fas fa-calendar-day"></i> Registration Deadline: March 10, 2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice-actions">
+                        <button class="action-btn mark-read">
+                            <i class="far fa-check-circle"></i> Mark as Read
+                        </button>
+                        <button class="action-btn archive">
+                            <i class="fas fa-archive"></i> Archive
+                        </button>
+                        <button class="action-btn more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Item - Event -->
+                <div class="notice-item event">
+                    <div class="notice-badge">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Event</span>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-header">
+                            <h2>Annual University Career Fair</h2>
+                            <span class="notice-date">March 1, 2023</span>
+                        </div>
+                        <div class="notice-body">
+                            <p>Join us for the annual career fair on March 25th from 10 AM to 4 PM at the Main Campus Hall. Over 100 companies will be recruiting for internships and full-time positions.</p>
+                            <div class="notice-attachments">
+                                <a href="#" class="attachment">
+                                    <i class="fas fa-file-pdf"></i> Participating Companies.pdf
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice-actions">
+                        <button class="action-btn reminder">
+                            <i class="far fa-bell"></i> Set Reminder
+                        </button>
+                        <button class="action-btn more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Item - Academic -->
+                <div class="notice-item academic">
+                    <div class="notice-badge">
+                        <i class="fas fa-book-open"></i>
+                        <span>Academic</span>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-header">
+                            <h2>Library Closure for Maintenance</h2>
+                            <span class="notice-date">Yesterday, 4:15 PM</span>
+                        </div>
+                        <div class="notice-body">
+                            <p>The main library will be closed this Saturday, March 11th, for scheduled maintenance. Online resources will remain available. We apologize for any inconvenience.</p>
+                            <div class="notice-deadline">
+                                <i class="fas fa-clock"></i> Closure: March 11, 8 AM - 8 PM
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice-actions">
+                        <button class="action-btn more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Archived Notice -->
+                <div class="notice-item archived">
+                    <div class="notice-badge">
+                        <i class="fas fa-archive"></i>
+                        <span>Archived</span>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-header">
+                            <h2>Winter Semester Registration Open</h2>
+                            <span class="notice-date">January 5, 2023</span>
+                        </div>
+                        <div class="notice-body">
+                            <p>Registration for Winter Semester courses is now open until January 20th. Please log in to the student portal to select your courses.</p>
+                        </div>
+                    </div>
+                    <div class="notice-actions">
+                        <button class="action-btn unarchive">
+                            <i class="fas fa-box-open"></i> Unarchive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle filter panel
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            document.querySelector('.filter-panel').classList.toggle('active');
+        });
+
+        // Mark as read functionality
+        document.querySelectorAll('.action-btn.mark-read').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const noticeItem = this.closest('.notice-item');
+                noticeItem.classList.remove('important');
+                noticeItem.classList.add('read');
+                this.innerHTML = '<i class="fas fa-check-circle"></i> Read';
+            });
+        });
+
+        // Archive/unarchive functionality
+        document.querySelectorAll('.action-btn.archive').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const noticeItem = this.closest('.notice-item');
+                noticeItem.classList.add('archived');
+                this.innerHTML = '<i class="fas fa-box-open"></i> Unarchive';
+                this.classList.remove('archive');
+                this.classList.add('unarchive');
+            });
+        });
+
+        document.querySelectorAll('.action-btn.unarchive').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const noticeItem = this.closest('.notice-item');
+                noticeItem.classList.remove('archived');
+                this.innerHTML = '<i class="fas fa-archive"></i> Archive';
+                this.classList.remove('unarchive');
+                this.classList.add('archive');
+            });
+        });
+    </script>
+</body>
+</html>

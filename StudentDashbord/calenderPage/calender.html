@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Full Calendar</title>
+    <link rel="stylesheet" href="calender.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="calendar-content">
+            <div class="content-header">
+                <h1><i class="fas fa-calendar-alt"></i> Academic Calendar</h1>
+                <div class="header-actions">
+                    <button class="btn-outline">
+                        <i class="fas fa-plus"></i> Add Event
+                    </button>
+                    <button class="btn-outline">
+                        <i class="fas fa-sync-alt"></i> Sync Calendar
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-view-options">
+                    <button class="view-option active">Month</button>
+                    <button class="view-option">Week</button>
+                    <button class="view-option">Day</button>
+                    <button class="view-option">List</button>
+                </div>
+
+                <div id="fullCalendar"></div>
+            </div>
+
+            <div class="upcoming-events">
+                <div class="section-header">
+                    <h2>Upcoming Events</h2>
+                </div>
+                <div class="event-list">
+                    <div class="event-item class">
+                        <div class="event-time">Mon, Mar 13 | 10:00 AM</div>
+                        <div class="event-details">
+                            <h3>Advanced Physics</h3>
+                            <p>Lecture Hall A | Dr. Smith</p>
+                        </div>
+                        <button class="event-action">
+                            <i class="fas fa-video"></i>
+                        </button>
+                    </div>
+                    <div class="event-item assignment">
+                        <div class="event-time">Tue, Mar 14 | 11:59 PM</div>
+                        <div class="event-details">
+                            <h3>Quantum Physics Problem Set Due</h3>
+                            <p>Advanced Physics</p>
+                        </div>
+                        <button class="event-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                    <div class="event-item exam">
+                        <div class="event-time">Fri, Mar 17 | 9:00 AM</div>
+                        <div class="event-details">
+                            <h3>Data Structures Midterm Exam</h3>
+                            <p>Computer Lab 3</p>
+                        </div>
+                        <button class="event-action">
+                            <i class="fas fa-book"></i>
+                        </button>
+                    </div>
+                    <div class="event-item event">
+                        <div class="event-time">Sat, Mar 25 | 10:00 AM</div>
+                        <div class="event-details">
+                            <h3>University Career Fair</h3>
+                            <p>Main Campus Hall</p>
+                        </div>
+                        <button class="event-action">
+                            <i class="fas fa-info-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('fullCalendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                events: [
+                    {
+                        title: 'Advanced Physics',
+                        start: '2023-03-13T10:00:00',
+                        end: '2023-03-13T11:30:00',
+                        color: '#9333ea',
+                        extendedProps: {
+                            type: 'class',
+                            location: 'Lecture Hall A',
+                            instructor: 'Dr. Smith'
+                        }
+                    },
+                    {
+                        title: 'Quantum Physics Problem Set Due',
+                        start: '2023-03-14T23:59:00',
+                        color: '#ef4444',
+                        extendedProps: {
+                            type: 'assignment'
+                        }
+                    },
+                    {
+                        title: 'Data Structures Midterm Exam',
+                        start: '2023-03-17T09:00:00',
+                        end: '2023-03-17T11:00:00',
+                        color: '#f59e0b',
+                        extendedProps: {
+                            type: 'exam',
+                            location: 'Computer Lab 3'
+                        }
+                    },
+                    {
+                        title: 'University Career Fair',
+                        start: '2023-03-25T10:00:00',
+                        end: '2023-03-25T16:00:00',
+                        color: '#3b82f6',
+                        extendedProps: {
+                            type: 'event',
+                            location: 'Main Campus Hall'
+                        }
+                    }
+                    // More events would be here
+                ],
+                eventClick: function(info) {
+                    alert('Event: ' + info.event.title + '\n' +
+                          'Type: ' + info.event.extendedProps.type + '\n' +
+                          (info.event.extendedProps.location ? 'Location: ' + info.event.extendedProps.location + '\n' : '') +
+                          (info.event.extendedProps.instructor ? 'Instructor: ' + info.event.extendedProps.instructor : ''));
+                    info.jsEvent.preventDefault();
+                },
+                eventContent: function(arg) {
+                    const typeIcon = {
+                        'class': 'fas fa-chalkboard-teacher',
+                        'assignment': 'fas fa-tasks',
+                        'exam': 'fas fa-clipboard-list',
+                        'event': 'fas fa-calendar-check'
+                    }[arg.event.extendedProps.type] || 'fas fa-calendar-alt';
+
+                    const timeText = arg.timeText ? `<div class="fc-event-time">${arg.timeText}</div>` : '';
+                    
+                    return {
+                        html: `
+                            <div class="fc-event-main">
+                                <i class="${typeIcon}"></i>
+                                ${timeText}
+                                <div class="fc-event-title">${arg.event.title}</div>
+                            </div>
+                        `
+                    };
+                }
+            });
+            calendar.render();
+
+            // Handle view option buttons
+            document.querySelectorAll('.view-option').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.view-option').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const view = this.textContent.toLowerCase();
+                    if (view === 'month') {
+                        calendar.changeView('dayGridMonth');
+                    } else if (view === 'week') {
+                        calendar.changeView('timeGridWeek');
+                    } else if (view === 'day') {
+                        calendar.changeView('timeGridDay');
+                    } else if (view === 'list') {
+                        calendar.changeView('listWeek');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

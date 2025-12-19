@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Current Courses</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="courses-content">
+            <div class="content-header">
+                <h1><i class="fas fa-book-open"></i> Current Courses</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search courses...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+            </div>
+
+            <div class="course-grid">
+                <!-- Current Semester Courses -->
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #e9d5ff;">
+                        <i class="fas fa-atom" style="color: #9333ea;"></i>
+                        <h2>Advanced Physics</h2>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <p><i class="fas fa-user"></i> Dr. Smith</p>
+                            <p><i class="fas fa-calendar-alt"></i> Mon/Wed 10:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Lecture Hall A</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>75% completed</span>
+                                <span>12/16 weeks</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="course-resources">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><i class="fas fa-file-pdf"></i> Syllabus</li>
+                                <li><i class="fas fa-book"></i> Textbook: Quantum Physics</li>
+                                <li><i class="fas fa-link"></i> Online Lab Portal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-outline">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                        <button class="btn-primary">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #d1fae5;">
+                        <i class="fas fa-calculator" style="color: #10b981;"></i>
+                        <h2>Calculus II</h2>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <p><i class="fas fa-user"></i> Prof. Johnson</p>
+                            <p><i class="fas fa-calendar-alt"></i> Tue/Thu 2:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Room 302</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>60% completed</span>
+                                <span>9/15 weeks</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="course-resources">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><i class="fas fa-file-pdf"></i> Syllabus</li>
+                                <li><i class="fas fa-book"></i> Textbook: Advanced Calculus</li>
+                                <li><i class="fas fa-link"></i> Problem Sets</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-outline">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                        <button class="btn-primary">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header" style="background-color: #e0e7ff;">
+                        <i class="fas fa-laptop-code" style="color: #6366f1;"></i>
+                        <h2>Data Structures</h2>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <p><i class="fas fa-user"></i> Dr. Williams</p>
+                            <p><i class="fas fa-calendar-alt"></i> Fri 9:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Computer Lab 3</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>45% completed</span>
+                                <span>6/13 weeks</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="course-resources">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><i class="fas fa-file-pdf"></i> Syllabus</li>
+                                <li><i class="fas fa-book"></i> Textbook: Algorithms</li>
+                                <li><i class="fas fa-link"></i> Coding Platform</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-outline">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                        <button class="btn-primary">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Past Courses Section -->
+                <div class="section-header">
+                    <h2>Past Courses</h2>
+                </div>
+
+                <div class="course-card past">
+                    <div class="course-header" style="background-color: #fce7f3;">
+                        <i class="fas fa-flask" style="color: #ec4899;"></i>
+                        <h2>Chemistry 101</h2>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <p><i class="fas fa-user"></i> Dr. Brown</p>
+                            <p><i class="fas fa-calendar-alt"></i> Fall 2022</p>
+                            <p><i class="fas fa-star"></i> Grade: A-</p>
+                        </div>
+                        <div class="course-resources">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><i class="fas fa-file-pdf"></i> Archived Materials</li>
+                                <li><i class="fas fa-link"></i> Final Project</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn-outline">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

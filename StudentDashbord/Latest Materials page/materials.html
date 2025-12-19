@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Latest Materials</title>
+    <link rel="stylesheet" href="materials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="materials-content">
+            <div class="content-header">
+                <h1><i class="fas fa-file-alt"></i> Course Materials</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search materials...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                    <button class="btn-primary">
+                        <i class="fas fa-upload"></i> Submit Assignment
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Panel (initially hidden) -->
+            <div class="filter-panel">
+                <div class="filter-group">
+                    <h3>Course</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Courses</label>
+                        <label><input type="checkbox"> Advanced Physics</label>
+                        <label><input type="checkbox"> Calculus II</label>
+                        <label><input type="checkbox"> Data Structures</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Type</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" checked> All Types</label>
+                        <label><input type="checkbox"> Lectures</label>
+                        <label><input type="checkbox"> Assignments</label>
+                        <label><input type="checkbox"> Solutions</label>
+                        <label><input type="checkbox"> Tutorials</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Timeframe</h3>
+                    <div class="filter-options">
+                        <label><input type="radio" name="timeframe" checked> All Time</label>
+                        <label><input type="radio" name="timeframe"> This Week</label>
+                        <label><input type="radio" name="timeframe"> This Month</label>
+                        <label><input type="radio" name="timeframe"> Last 3 Months</label>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-outline">Reset</button>
+                    <button class="btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="materials-container">
+                <!-- Materials by Course -->
+                <div class="course-section">
+                    <div class="section-header">
+                        <h2>Advanced Physics</h2>
+                        <span class="material-count">12 items</span>
+                    </div>
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <div class="material-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="material-details">
+                                <h3>Quantum Mechanics Lecture 5</h3>
+                                <div class="material-meta">
+                                    <span><i class="fas fa-user"></i> Dr. Smith</span>
+                                    <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                                    <span><i class="fas fa-file"></i> 4.2 MB</span>
+                                </div>
+                                <p class="material-description">Wave functions and probability densities in quantum systems</p>
+                            </div>
+                            <div class="material-actions">
+                                <button class="action-btn download"><i class="fas fa-download"></i></button>
+                                <button class="action-btn bookmark"><i class="far fa-bookmark"></i></button>
+                                <button class="action-btn more"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="material-card">
+                            <div class="material-icon video">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="material-details">
+                                <h3>Schrödinger Equation Tutorial</h3>
+                                <div class="material-meta">
+                                    <span><i class="fas fa-user"></i> Dr. Smith</span>
+                                    <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                    <span><i class="fas fa-file"></i> Video (45 min)</span>
+                                </div>
+                                <p class="material-description">Step-by-step solutions to common quantum mechanics problems</p>
+                            </div>
+                            <div class="material-actions">
+                                <button class="action-btn download"><i class="fas fa-download"></i></button>
+                                <button class="action-btn bookmark"><i class="fas fa-bookmark"></i></button>
+                                <button class="action-btn more"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="material-card">
+                            <div class="material-icon assignment">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="material-details">
+                                <h3>Problem Set 3</h3>
+                                <div class="material-meta">
+                                    <span><i class="fas fa-user"></i> Dr. Smith</span>
+                                    <span><i class="fas fa-clock"></i> 3 days ago</span>
+                                    <span><i class="fas fa-file"></i> 1.8 MB</span>
+                                </div>
+                                <p class="material-description">Due next Monday at 11:59 PM</p>
+                            </div>
+                            <div class="material-actions">
+                                <button class="action-btn submit"><i class="fas fa-paper-plane"></i> Submit</button>
+                                <button class="action-btn more"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Course Sections -->
+                <div class="course-section">
+                    <div class="section-header">
+                        <h2>Calculus II</h2>
+                        <span class="material-count">8 items</span>
+                    </div>
+                    <div class="materials-grid">
+                        <!-- Similar material cards for Calculus II -->
+                    </div>
+                </div>
+
+                <div class="course-section">
+                    <div class="section-header">
+                        <h2>Data Structures</h2>
+                        <span class="material-count">15 items</span>
+                    </div>
+                    <div class="materials-grid">
+                        <!-- Similar material cards for Data Structures -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle filter panel
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            document.querySelector('.filter-panel').classList.toggle('active');
+        });
+
+        // Toggle bookmark state
+        document.querySelectorAll('.action-btn.bookmark').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (this.classList.contains('active')) {
+                    icon.classList.replace('far', 'fas');
+                } else {
+                    icon.classList.replace('fas', 'far');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

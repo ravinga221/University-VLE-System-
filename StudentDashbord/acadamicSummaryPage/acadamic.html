@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University VLE - Academic Summary</title>
+    <link rel="stylesheet" href="acadamic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>University VLE</span>
+                </div>
+                <div class="nav-logout">
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="academic-content">
+            <div class="content-header">
+                <h1><i class="fas fa-chart-line"></i> Academic Summary</h1>
+                <div class="header-actions">
+                    <button class="btn-outline">
+                        <i class="fas fa-download"></i> Download Transcript
+                    </button>
+                </div>
+            </div>
+
+            <div class="academic-grid">
+                <!-- GPA Overview -->
+                <div class="gpa-card">
+                    <div class="card-header">
+                        <h2>GPA Overview</h2>
+                    </div>
+                    <div class="gpa-display">
+                        <div class="current-gpa">
+                            <div class="gpa-circle">
+                                <div class="circle-progress" data-value="3.75">
+                                    <svg class="progress-ring" width="160" height="160">
+                                        <circle class="progress-ring-circle" stroke-width="10" fill="transparent" r="70" cx="80" cy="80"/>
+                                    </svg>
+                                    <div class="gpa-value">3.75</div>
+                                </div>
+                            </div>
+                            <div class="gpa-info">
+                                <p>Current GPA</p>
+                                <p class="gpa-trend positive">
+                                    <i class="fas fa-arrow-up"></i> 0.15 from last semester
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gpa-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Cumulative GPA</span>
+                                <span class="detail-value">3.68</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Credits Earned</span>
+                                <span class="detail-value">45/120</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Current Semester</span>
+                                <span class="detail-value">Spring 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GPA Trend Chart -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h2>GPA Trend</h2>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="gpaTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Credit Progress -->
+                <div class="progress-card">
+                    <div class="card-header">
+                        <h2>Credit Progress</h2>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>45 credits completed</span>
+                            <span>37.5% of degree</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 37.5%;"></div>
+                        </div>
+                        <div class="progress-details">
+                            <div class="detail-item">
+                                <span class="detail-label">General Education</span>
+                                <span class="detail-value">18/30</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Major Requirements</span>
+                                <span class="detail-value">15/60</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Electives</span>
+                                <span class="detail-value">12/30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attendance -->
+                <div class="attendance-card">
+                    <div class="card-header">
+                        <h2>Attendance</h2>
+                    </div>
+                    <div class="attendance-container">
+                        <div class="attendance-overview">
+                            <div class="attendance-value">
+                                <span>92%</span>
+                                <p>Overall Attendance</p>
+                            </div>
+                            <div class="attendance-trend positive">
+                                <i class="fas fa-arrow-up"></i> 5% from last semester
+                            </div>
+                        </div>
+                        <div class="attendance-details">
+                            <div class="attendance-item">
+                                <span class="course-name">Advanced Physics</span>
+                                <span class="attendance-percent">95%</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="course-name">Calculus II</span>
+                                <span class="attendance-percent">90%</span>
+                            </div>
+                            <div class="attendance-item">
+                                <span class="course-name">Data Structures</span>
+                                <span class="attendance-percent">91%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transcript -->
+                <div class="transcript-card">
+                    <div class="card-header">
+                        <h2>Unofficial Transcript</h2>
+                    </div>
+                    <div class="transcript-container">
+                        <div class="transcript-header">
+                            <div class="header-item">Course</div>
+                            <div class="header-item">Title</div>
+                            <div class="header-item">Credits</div>
+                            <div class="header-item">Grade</div>
+                        </div>
+                        <div class="transcript-semester">
+                            <div class="semester-header">Spring 2023</div>
+                            <div class="transcript-item">
+                                <div class="item-course">PHYS 301</div>
+                                <div class="item-title">Advanced Physics</div>
+                                <div class="item-credits">4</div>
+                                <div class="item-grade">A-</div>
+                            </div>
+                            <div class="transcript-item">
+                                <div class="item-course">MATH 202</div>
+                                <div class="item-title">Calculus II</div>
+                                <div class="item-credits">4</div>
+                                <div class="item-grade">B+</div>
+                            </div>
+                            <div class="transcript-item">
+                                <div class="item-course">CS 210</div>
+                                <div class="item-title">Data Structures</div>
+                                <div class="item-credits">3</div>
+                                <div class="item-grade">A</div>
+                            </div>
+                        </div>
+                        <div class="transcript-semester">
+                            <div class="semester-header">Fall 2022</div>
+                            <div class="transcript-item">
+                                <div class="item-course">CHEM 101</div>
+                                <div class="item-title">Chemistry 101</div>
+                                <div class="item-credits">4</div>
+                                <div class="item-grade">A-</div>
+                            </div>
+                            <!-- More items would be here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2023 University VLE System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // GPA Trend Chart
+        const gpaCtx = document.getElementById('gpaTrendChart').getContext('2d');
+        const gpaChart = new Chart(gpaCtx, {
+            type: 'line',
+            data: {
+                labels: ['Fall 2021', 'Spring 2022', 'Fall 2022', 'Spring 2023'],
+                datasets: [{
+                    label: 'Semester GPA',
+                    data: [3.5, 3.6, 3.6, 3.75],
+                    borderColor: '#9333ea',
+                    backgroundColor: 'rgba(147, 51, 234, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }, {
+                    label: 'Cumulative GPA',
+                    data: [3.5, 3.55, 3.57, 3.68],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 3.0,
+                        max: 4.0,
+                        ticks: {
+                            stepSize: 0.2
+                        }
+                    }
+                }
+            }
+        });
+
+        // Circular GPA progress
+        document.addEventListener('DOMContentLoaded', function() {
+            const circle = document.querySelector('.progress-ring-circle');
+            const radius = circle.r.baseVal.value;
+            const circumference = radius * 2 * Math.PI;
+            
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = circumference;
+            
+            const offset = circumference - (3.75 / 4.0) * circumference;
+            circle.style.strokeDashoffset = offset;
+            circle.style.stroke = '#9333ea';
+        });
+    </script>
+</body>
+</html>
